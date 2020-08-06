@@ -13,7 +13,7 @@ export default class Update extends React.Component {
      this.state={Id: '',Name: '', Address: '', Phone_Number: ''};
 
  } 
- UpdateLendee(ida)
+ UpdateLendee(id)
   {
     let collection={};
     var name = this.state.Name;
@@ -26,7 +26,7 @@ export default class Update extends React.Component {
     collection.address = address;
     collection.phone_number = phone_number;
 
-    fetch('http://localhost:8000/api/lendee/'+id, {
+    fetch(baseUrl+'/lendee/'+id, {
       method: 'PUT', // or 'PUT'
       headers: {
         'Content-Type': 'application/json',
